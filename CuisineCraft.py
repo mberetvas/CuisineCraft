@@ -4,6 +4,7 @@ import random
 import pandas as pd
 from tkinter import ttk
 from tkinter import messagebox
+from tkinter import filedialog
 
 
 
@@ -214,6 +215,29 @@ def get_ingredients(random_meals):
     for i in range(len(ingredients_dict)):
         ingredienten_rand_meals.insert(parent='', index='end', iid=i, text=i, values=(ingredients_dict[i]['ingredient'], ingredients_dict[i]['total_hoeveelheid'], ingredients_dict[i]['eenheid']))
 
+# export to text file().
+def export_to_text_file():
+    # Get the selected meals from the listbox
+    selected_meals = weekgenerator_listbox.get(0, tk.END)
+
+    # Get the ingredients from the treeview
+    ingredients = []
+    for item in ingredienten_rand_meals.get_children():
+        ingredient = ingredienten_rand_meals.item(item, 'values')
+        ingredients.append(','.join(ingredient))
+
+    # Combine the meals and ingredients into a single string
+    content = '\n'.join(selected_meals) + '\n' + '\n'.join(ingredients)
+
+    # Open a file dialog to choose the export file path
+    file_path = filedialog.asksaveasfilename(
+        defaultextension='.txt',
+        filetypes=[('Text Files', '*.txt')]
+    )
+
+    # Write the content to the selected file
+    with open(file_path, 'w') as file:
+        file.write(content)
 
 
 ################################################################################
@@ -283,7 +307,7 @@ random_button = tk.Button(
 # Moet nog functie gemaakt worden voor het exporteren
 export_button = tk.Button(
     tab_weekmenu_generator,
-    text="Exporteer weekMenu en ingredienten").pack(padx=5, pady=5)
+    text="Exporteer weekMenu en ingredienten", command=export_to_text_file).pack(padx=5, pady=5)
 
 #Configure the treeview
 ingredienten_rand_meals.column(1, width=100)
