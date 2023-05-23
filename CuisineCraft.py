@@ -391,46 +391,46 @@ ingredienten_voorbeeld_label = tk.Label(
 
 # Add entry's here down.
 ingredient_entry_1 = tk.Entry(tab_ingredienten, width=100)
-ingredient_entry_1.pack(pady=5)
+ingredient_entry_1.pack(pady=5, padx=5)
 
 ingredient_entry_2 = tk.Entry(tab_ingredienten, width=100)
-ingredient_entry_2.pack(pady=5)
+ingredient_entry_2.pack(pady=5, padx=5)
 
 ingredient_entry_3 = tk.Entry(tab_ingredienten, width=100)
-ingredient_entry_3.pack(pady=5)
+ingredient_entry_3.pack(pady=5, padx=5)
 
 ingredient_entry_4 = tk.Entry(tab_ingredienten, width=100)
-ingredient_entry_4.pack(pady=5)
+ingredient_entry_4.pack(pady=5, padx=5)
 
 ingredient_entry_5 = tk.Entry(tab_ingredienten, width=100)
-ingredient_entry_5.pack(pady=5)
+ingredient_entry_5.pack(pady=5, padx=5)
 
 ingredient_entry_6 = tk.Entry(tab_ingredienten, width=100)
-ingredient_entry_6.pack(pady=5)
+ingredient_entry_6.pack(pady=5, padx=5)
 
 ingredient_entry_7 = tk.Entry(tab_ingredienten, width=100)
-ingredient_entry_7.pack(pady=5)
+ingredient_entry_7.pack(pady=5, padx=5)
 
 ingredient_entry_8 = tk.Entry(tab_ingredienten, width=100)
-ingredient_entry_8.pack(pady=5)
+ingredient_entry_8.pack(pady=5, padx=5)
 
 ingredient_entry_9 = tk.Entry(tab_ingredienten, width=100)
-ingredient_entry_9.pack(pady=5)
+ingredient_entry_9.pack(pady=5, padx=5)
 
 ingredient_entry_10 = tk.Entry(tab_ingredienten, width=100)
-ingredient_entry_10.pack(pady=5)
+ingredient_entry_10.pack(pady=5, padx=5)
 
 ingredient_entry_11 = tk.Entry(tab_ingredienten, width=100)
-ingredient_entry_11.pack(pady=5)
+ingredient_entry_11.pack(pady=5, padx=5)
 
 ingredient_entry_12 = tk.Entry(tab_ingredienten, width=100)
-ingredient_entry_12.pack(pady=5)
+ingredient_entry_12.pack(pady=5, padx=5)
 
 ingredient_entry_13 = tk.Entry(tab_ingredienten, width=100)
-ingredient_entry_13.pack(pady=5)
+ingredient_entry_13.pack(pady=5, padx=5)
 
 ingredient_entry_14 = tk.Entry(tab_ingredienten, width=100)
-ingredient_entry_14.pack(pady=5)
+ingredient_entry_14.pack(pady=5, padx=5)
 
 
 ################################# Buttons ######################################

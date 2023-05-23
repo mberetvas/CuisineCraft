@@ -66,3 +66,5 @@ Just a heads up, the application uses a database file called "CuisineCraft.db" t
 - Generate an executable (.exe) file for the source code.
 - Implement functionality to redirect users to the corresponding recipe website (URL column in database) upon clicking.
 - Integrate web scraping capabilities to update the price column of ingredients. This will provide an approximate cost estimation when exporting the ingredients list for the weekmenu.
+- Some way to save the week menu generated so you can go back to it later.
+- ability to click the recipes name in the listbox and be redirected to the instructions.
