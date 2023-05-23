@@ -100,8 +100,8 @@ def insert_data_ingredienten():
         entry_data = eval(entry_name + ".get()").split(',')
         
         # Check if the entry_data list contains only zeros
-        if all(data == '0' for data in entry_data):
-            continue # Skip to the next iteration.
+        if all(data == '0' or data == '' for data in entry_data):
+            continue
 
         # Insert ID_maaltijden at the beginning of the list
         entry_data.insert(0, id_maaltijden)
@@ -234,6 +234,10 @@ def export_to_text_file():
         defaultextension='.txt',
         filetypes=[('Text Files', '*.txt')]
     )
+
+    # Abort the function if file_path is empty
+    if not file_path:
+        return
 
     # Write the content to the selected file
     with open(file_path, 'w') as file:
