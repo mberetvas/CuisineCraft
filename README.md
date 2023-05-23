@@ -32,6 +32,16 @@ To use the CuisineCraft Recipe Management System, you need to have the following
    - **Ingredienten toevoegen aan recept**: Add ingredients to a recipe in the database.
 
 6. Follow the instructions provided in the application's interface to interact with the different tabs and perform actions such as adding recipes, ingredients, and generating a weekly menu.
+  
+# Work Flow  
+1. Open the "Add recipes" Tab.
+2. Fill the entries and click the button "Add to database" if "ok" you will get a message box that it was succesfull.
+3. Clear all entries (button) not mandatory but it doesn't hurt to clean the entries
+4. If everything went good this far you will be able to find your newly added recipe inside the listbox of the "recipe list" tab after using the refresh button.
+5. Now open the "Add ingredients to recipe" tab
+6. Fill the entries with the ingredients as follows => amount,unit,ingredient,(price,store,datetime_of_price)
+7. every entries will be split() to a list with the ',' separator.
+8. Only the amount,unit,ingredient values are mandatory the rest will be filled with 0's
 
 ## Using the executable.
 

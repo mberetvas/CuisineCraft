@@ -264,10 +264,10 @@ tab_maaltijden = ttk.Frame(notebook)
 tab_ingredienten = ttk.Frame(notebook)
 
 # Add names to the tabs.
-notebook.add(tab_recepten_lijst, text='Recepten Lijst')
+notebook.add(tab_recepten_lijst, text='Recipe List')
 notebook.add(tab_weekmenu_generator, text='weekmenu generator')
-notebook.add(tab_maaltijden, text='Recepten toevoegen')
-notebook.add(tab_ingredienten, text='Ingredienten toevoegen aan recept')
+notebook.add(tab_maaltijden, text='Add recipes')
+notebook.add(tab_ingredienten, text='Add ingredients to recipe')
 
 ############################# Listbox recepten lijst ###########################
 # Add a listbox widget to recepten lijst tab with the recepten.
@@ -288,30 +288,30 @@ r_listbox.pack(fill='both', expand=True, padx=10, pady=(10, 0))
 ############################# Weekmenu generator ###############################
 
 # Add a listbox to show the 7 randomly selected meals.
-weekgenerator_listbox = tk.Listbox(tab_weekmenu_generator, borderwidth=2)
+weekgenerator_listbox = tk.Listbox(tab_weekmenu_generator, borderwidth=2, width=90)
 
 # Create the Treeview widget with two columns
-ingredienten_rand_meals = ttk.Treeview(tab_weekmenu_generator, columns=('ingredient', 'hoeveelheid', 'eenheid'), show='headings')
+ingredienten_rand_meals = ttk.Treeview(tab_weekmenu_generator, columns=('ingredients', 'Amount', 'unit'), show='headings')
 
 # Add headings for each column
-ingredienten_rand_meals.heading('#1', text='Ingredient')
-ingredienten_rand_meals.heading('#2', text='Hoeveelheid')
-ingredienten_rand_meals.heading('#3', text='eenheid')
+ingredienten_rand_meals.heading('#1', text='Ingredients')
+ingredienten_rand_meals.heading('#2', text='Amount')
+ingredienten_rand_meals.heading('#3', text='unit')
 
 # pack the listbox to the tab.
-weekgenerator_listbox.pack(fill='both', padx=10, pady=10)
+weekgenerator_listbox.pack(padx=10, pady=10)
 
 # Button to create the weekmenu.
 random_button = tk.Button(
     tab_weekmenu_generator,
-    text="Maak een weekMenu",
+    text="Make a Week Menu",
     command=random_meals) .pack(padx=5, pady=5)
 
 # Button to export the weekmenu and the ingredients list.
 # Moet nog functie gemaakt worden voor het exporteren
 export_button = tk.Button(
     tab_weekmenu_generator,
-    text="Exporteer weekMenu en ingredienten", command=export_to_text_file).pack(padx=5, pady=5)
+    text="Export weekMenu and ingredients", command=export_to_text_file).pack(padx=5, pady=5)
 
 #Configure the treeview
 ingredienten_rand_meals.column(1, width=100)
@@ -331,32 +331,32 @@ ingredienten_rand_meals.pack(fill="y", expand=True, padx=5, pady=5)
 ############################### Maaltijden tab #################################
 
 # recept
-recept_entry_label = tk.Label(tab_maaltijden, text="Naam van het recept")
+recept_entry_label = tk.Label(tab_maaltijden, text="Name of the recipe")
 recept_entry_label.pack(pady=5)
 recept_entry = tk.Entry(tab_maaltijden, width=100)
 recept_entry.pack(pady=5)
 
 # create a entry for aantal_personen.
-aantal_personen_entry_label = tk.Label(tab_maaltijden, text="Aantal personen")
+aantal_personen_entry_label = tk.Label(tab_maaltijden, text="Number of persons")
 aantal_personen_entry_label.pack(pady=5)
 aantal_personen_entry = tk.Entry(tab_maaltijden, width=100)
 aantal_personen_entry.pack(pady=5)
 
 # bereidingstijd
-bereidingstijd_entry_label = tk.Label(tab_maaltijden, text="Bereidingstijd")
+bereidingstijd_entry_label = tk.Label(tab_maaltijden, text="Cooking time")
 bereidingstijd_entry_label.pack(pady=5)
 bereidingstijd_entry = tk.Entry(tab_maaltijden, width=100)
 bereidingstijd_entry.pack(pady=5)
 
 # keuken origine
-keuken_origine_entry_label = tk.Label(tab_maaltijden, text="Keuken origine")
+keuken_origine_entry_label = tk.Label(tab_maaltijden, text="Cuisine origin")
 keuken_origine_entry_label.pack(pady=5)
 keuken_origine_entry = tk.Entry(tab_maaltijden, width=100)
 keuken_origine_entry.pack(pady=5)
 
 # locatie bestand/recept
 locatie_bestand_entry_label = tk.Label(
-    tab_maaltijden, text="Locatie van bestand")
+    tab_maaltijden, text="File location")
 locatie_bestand_entry_label.pack(pady=5)
 locatie_bestand_entry = tk.Entry(tab_maaltijden, width=100)
 locatie_bestand_entry.pack(pady=5)
@@ -369,7 +369,7 @@ url_entry.pack(pady=5)
 
 # gezondheidsgraad
 gezondheidsgraad_entry_label = tk.Label(
-    tab_maaltijden, text="gezondheidsgraad (1 tot 3 met 1 het gezondste)")
+    tab_maaltijden, text="health grade (1 to 3 with 1 being the healthiest)")
 gezondheidsgraad_entry_label.pack(pady=5)
 gezondheidsgraad_entry = tk.Entry(tab_maaltijden, width=100)
 gezondheidsgraad_entry.pack(pady=5)
@@ -385,9 +385,9 @@ button_frame.pack(padx=5, pady=5)
 
 # ingredienten lijst
 ingredienten_label = tk.Label(
-    tab_ingredienten, text="Geef de ingredienten in als volgt: hoveelheid,eenheid,ingredient").pack(pady=5)
+    tab_ingredienten, text="Enter ingredients as follows: amount, unit, ingredient").pack(pady=5)
 ingredienten_voorbeeld_label = tk.Label(
-    tab_ingredienten, text="Voorbeeld = 1,kg,aardappelen").pack(pady=5)
+    tab_ingredienten, text="Example = 1,kg,potatoes").pack(pady=5)
 
 # Add entry's here down.
 ingredient_entry_1 = tk.Entry(tab_ingredienten, width=100)
@@ -436,26 +436,26 @@ ingredient_entry_14.pack(pady=5)
 ################################# Buttons ######################################
 
 # Add data to database button tab_maaltijden
-insert_button = tk.Button(tab_maaltijden, text="Toevoegen",
+insert_button = tk.Button(tab_maaltijden, text="Add to database",
                           command=insert_data).pack(padx=5, pady=5)
 
 # Button to clear all entries from all tabs
 clear_button = tk.Button(
-    tab_maaltijden, text="Wis alle invoer", command=clear_entries).pack(padx=5, pady=5)
+    tab_maaltijden, text="Clear all entries", command=clear_entries).pack(padx=5, pady=5)
 
 # Add data to database button tab_ingredienten
-insert_button = tk.Button(tab_ingredienten, text="Toevoegen",
+insert_button = tk.Button(tab_ingredienten, text="Add to database",
                           command=insert_data_ingredienten).pack(padx=5, pady=5)
 
 # Button to clear all entries from all tabs
 clear_button = tk.Button(
-    tab_ingredienten, text="Wis alle invoer", command=clear_entries).pack(padx=5, pady=5)
+    tab_ingredienten, text="Clear all entries", command=clear_entries).pack(padx=5, pady=5)
 
 
 # Button to refresch the recepie list.
 refresh_button = tk.Button(
     tab_recepten_lijst,
-    text="Ververs recepten lijst",
+    text="Refresh recipe list",
     command=get_recipies).pack(padx=5, pady=5)
 
 
