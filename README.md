@@ -1,9 +1,9 @@
 # CuisineCraft Recipe Management System
 
-What ?
+What ? 
 The CuisineCraft Recipe Management System is a Python application that provides a Python application for managing recipes, ingredients, and meal planning. The application is built using the tkinter library for creating the graphical user interface (GUI) and SQLite for storing the recipe and ingredient data. 
  
-Why ?
+Why ? 
 CuisineCraft is an application designed to make your life easier by generating a weekly menu of recipes that you have added to the database. 
 It also provides an ingredients list for the entire week's menu, allowing you to conveniently plan your grocery shopping.
 
