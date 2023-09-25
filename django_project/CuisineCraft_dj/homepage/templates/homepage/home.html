@@ -5,17 +5,34 @@
 <!DOCTYPE html>
 <html>
 <head>
-<style>
-    body {background-image:url("{% static 'homepage/background.png' %}");}
-    h1 {color: aliceblue;}
-    p {color: aliceblue;}
-</style>
-<title>Homepage</title>
+    <title>Homepage</title>
+    <link rel="stylesheet" type="text/css" href="static/homepage/homepage.css">
 </head>
 <body>
-
-<h1 style="text-align:center;">Welkom bij CuisineCraft.</h1>
-<p>Hello World !</p>
+    <nav>
+        <div class="navbar">
+          <div class="container nav-container">
+              <input class="checkbox" type="checkbox" name="" id="" />
+              <div class="hamburger-lines">
+                <span class="line line1"></span>
+                <span class="line line2"></span>
+                <span class="line line3"></span>
+              </div>  
+            <div class="logo">
+              <h1>Navbar</h1>
+            </div>
+            <div class="menu-items">
+              <li><a href="#">Home</a></li>
+              <li><a href="#">about</a></li>
+              <li><a href="#">blogs</a></li>
+              <li><a href="#">portfolio</a></li>
+              <li><a href="#">contact</a></li>
+            </div>
+          </div>
+        </div>
+      </nav>
+    
+    <h1 style="text-align:center;">CuisineCraft.</h1>
 
 </body>
 </html>
